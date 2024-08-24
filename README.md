@@ -2,13 +2,13 @@
 
 Generate ASCII art from a picture.
 
-Just upload or paste the link of the image to generate. 
+Just upload or paste the link of the image to generate.
 
-## Technologies 
+## Technologies
+
 - HTML
 - CSS
 - JavaScript
-- Web Assembly (Go Lang)
 
 ## Run Locally
 
@@ -34,4 +34,5 @@ Start the server
 
 ```bash
   npm run start
-  
+
+```

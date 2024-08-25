@@ -1,13 +1,13 @@
 export default class ImageModel {
-  constructor(imageBuffer) {
-    this._imageBuffer = imageBuffer;
+  constructor(imageURL) {
+    this._image = new Image(imageURL);
   }
 
-  get imageBuffer() {
-    return this._imageBuffer;
+  get image() {
+    return this._image;
   }
 
-  set imageBuffer(imageBuffer) {
-    this._imageBuffer = imageBuffer;
+  set image(imageURL) {
+    this._image.src = imageURL;
   }
 }

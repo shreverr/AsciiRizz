@@ -7,19 +7,12 @@ export class ImageController {
   }
 
   handleImageUpload = ({ image }) => {
-    console.info("Image upload handler called");
     if (!image) {
       alert("Please select an image to upload");
       return;
     }
 
-    const reader = new FileReader();
-    reader.readAsDataURL(image);
-    reader.onload = (event) => {
-      // ArrayBuffer from the image file
-      const imageBuffer = event.target.result;
-      
-      this._imageModel.imageBuffer = imageBuffer;
-    };
-  }
+    this._imageModel.image = URL.createObjectURL(image);
+    console.info("Image uploaded successfully");
+  };
 }

@@ -2,7 +2,9 @@ export default class ImageModel {
   constructor() {
     this._image = new Image();
     this._canvas = document.createElement("canvas");
-    this._context = this._canvas.getContext("2d");
+    this._context = this._canvas.getContext("2d", {
+      willReadFrequently: true,
+    });
   }
 
   get image() {
